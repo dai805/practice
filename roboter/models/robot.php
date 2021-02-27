@@ -1,5 +1,5 @@
 <?php
-
+require(dirname(__FILE__)."/../models/ranking.php");
 const DEFAULT_ROBOT_NAME = 'roboko';
 
 /**
@@ -19,6 +19,7 @@ class Robot
     
     public function hello()
     {
+        $csvmodel = new CsvModel("ranking.csv");
         $keywords = array("restaurant" => 'ABC Restaurant');
         $tmp = $this->template_replace('greeting.txt', $keywords);
     }
