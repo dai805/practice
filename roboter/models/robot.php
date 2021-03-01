@@ -19,9 +19,13 @@ class Robot
     
     public function hello()
     {
-        $csvmodel = new CsvModel("ranking.csv");
-        $keywords = array("restaurant" => 'ABC Restaurant');
-        $tmp = $this->template_replace('greeting.txt', $keywords);
+        $rankingmodel = new RankingModel();
+
+        // 後で戻す
+        // $csvpath = dirname(__FILE__)."/../../" . "ranking.csv";
+        // $csvmodel = new CsvModel($csvpath);
+        // $keywords = array("restaurant" => 'ABC Restaurant');
+        // $tmp = $this->template_replace('greeting.txt', $keywords);
     }
 
     /**
